@@ -24,6 +24,9 @@
   
   .logo img {
     width: 180px; /* Tamanho da imagem da logo */
+    border-radius: 10px;
+    
+  
   }
   
   /* NAVEGAÇÃO */
