@@ -1,48 +1,270 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    box-sizing: border-box; /* Inclui padding e borda na largura total do elemento */
+  }
+  
+  /* ESTILOS GERAIS DO CORPO */
+  /* Define a fonte principal, cor do fundo e cor do texto */
+  body {
+    font-family: 'Arial', sans-serif; /* Define uma fonte sans-serif para ser amigável e fácil de ler */
+    background-color: #f2f8ff; /* Cor de fundo suave para o site */
+    color: #333; /* Cor padrão para o texto */
+    line-height: 1.6; /* Melhora a legibilidade aumentando o espaçamento entre linhas */
+  }
+  
+  /* ESTILOS DO CABEÇALHO */
+  /* Define o layout do cabeçalho e seu conteúdo */
+  header {
+    background-color: black; /* Cor vibrante para o cabeçalho */
+    padding: 20px 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    border-bottom: 4px solid #3a3a3a; /* Adiciona uma borda na parte inferior para destaque */
+  }
+  
+  .logo img {
+    width: 180px; /* Tamanho da imagem da logo */
+    border-radius: 10px;
+    
+  
+  }
+  
+  /* NAVEGAÇÃO */
+  /* Define a lista de navegação como horizontal e centralizada */
+  nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Coloca os itens em linha */
+    justify-content: center; /* Centraliza os itens dentro do container */
+    margin-top: 10px; /* Espaçamento superior entre o logo e a navegação */
+  }
+  
+  nav ul li {
+    margin: 0 20px; /* Espaçamento lateral entre os links */
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #fff; /* Cor do texto dos links */
+    font-weight: bold; /* Destaca os links com negrito */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Adiciona transição suave para mudanças de cor */
+  }
+  
+  nav ul li a:hover {
+    color: #ff9900; /* Muda a cor dos links ao passar o mouse */
+  }
+  
+  /* ESTILOS DO BANNER */
+  /* Define a área do banner na página inicial */
+  .banner {
+    position: relative; /* Necessário para posicionar o texto sobre a imagem */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    margin-bottom: 30px; /* Espaçamento inferior */
+  }
+  
+  .banner img {
+    width: 100%; /* A imagem ocupa toda a largura do container */
+    max-height: 400px; /* Limita a altura da imagem para não ocupar muito espaço */
+    object-fit: cover; /* Garante que a imagem se ajuste ao container sem distorcer */
+  }
+  
+  .banner h1 {
+    position: absolute; /* O título flutua sobre a imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para garantir que o centro seja correto */
+    color: white; /* Cor do texto */
+    font-size: 48px; /* Tamanho grande para o título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto para destacá-lo */
+  }
+  
 
-
-
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f2f8ff;
-    color: #333;
-    line-height: 1.6;
-}
-
-
-header{
-    background-color: black;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 4px solid #3a3a3a;
-
-}
-
-
-nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-}
-
-
-nav ul li{
-    margin: 0 20px;
-}
-
-
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
+  .banner p {
+    position: absolute; /* Texto flutuante sobre a imagem */
+    bottom: 20px; /* Fica no rodapé da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para garantir a centralização */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhorar a legibilidade */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  .sobre-nos {
+    text-align: center; /* Centraliza o texto */
+    padding: 50px 20px; /* Espaçamento interno superior e inferior */
+    background-color: gray; /* Cor de fundo clara e alegre */
+  }
+  
+  .sobre-nos h2 {
+    font-size: 36px; /* Tamanho grande para o título */
+    color: black; /* Cor vibrante para o título */
+    margin-bottom: 20px; /* Espaçamento inferior entre o título e o parágrafo */
+  }
+  
+  .sobre-nos p {
+    font-size: 20px; /* Tamanho maior para melhorar a legibilidade */
+    color: #fff; /* Cor mais suave para o texto */
+    margin-bottom: 20px; /* Espaçamento inferior entre o texto e o botão */
+  }
+  
+  .sobre-nos .botao {
+    background-color: black; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+  }
+  
+  .sobre-nos .botao:hover {
+    background-color: rgb(41, 40, 40); /* Cor do botão ao passar o mouse */
+  }
+  
+  /* RODAPÉ */
+  footer {
+    background-color: black; /* Cor de fundo do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno superior e inferior */
+    font-size: 14px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    border-top: 4px solid #3a3a3a; /* Adiciona uma borda superior */
+  }
+  
+  /* PÁGINAS INTERNAS (SERVIÇOS, SOBRE, CONTATO) */
+  .servicos, .sobre, .contato {
+    padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+  
+  .servicos h1, .sobre h1, .contato h1 {
+    font-size: 36px; /* Tamanho grande para os títulos */
+    color: #ff9900; /* Cor vibrante */
+    margin-bottom: 30px; /* Espaçamento inferior entre o título e o conteúdo */
+  }
+  
+  .servicos ul {
+    list-style: none; /* Remove marcadores de lista */
+    font-size: 20px; /* Tamanho da fonte dos itens */
+  }
+  
+  .servicos ul li {
+    margin-bottom: 10px; /* Espaçamento inferior entre os itens */
+  }
+  
+  .contato form {
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+  }
+  
+  .contato label {
+    display: block; /* Faz o label ocupar a largura total */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-size: 18px; /* Tamanho da fonte */
+  }
+  
+  .contato input, .contato textarea {
+    width: 100%; /* Campos ocupam toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-size: 16px; /* Tamanho da fonte dos campos */
+    border: 1px solid #ccc; /* Borda simples */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  .contato button {
+    background-color: black; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
     
 }
+  
+  .contato button:hover {
+    background-color: rgb(32, 32, 32); /* Cor do botão ao passar o mouse */
+    
+}
+  
 
+  /* SEÇÃO DE WHATSAPP NA PÁGINA DE CONTATO */
+.whatsapp-contato {
+    margin-top: 40px; /* Espaçamento superior para separar do formulário */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+  
+  .whatsapp-botao {
+    background-color: #25d366; /* Cor oficial do WhatsApp */
+    color: white; /* Cor do texto */
+    padding: 15px 30px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-flex; /* Exibe como bloco em linha com flexbox */
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+  
+  .whatsapp-botao:hover {
+    background-color: #1ebe5b; /* Cor mais escura ao passar o mouse */
+  }
+  
+  .whatsapp-botao img {
+    width: 24px; /* Tamanho pequeno do ícone */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinha o ícone ao texto */
+  }
+
+.sobre img{
+    width: 100%;
+    max-width: 1050px;
+    height: auto;
+    margin: 0 auto;
+   
+}
+
+.sobre p{
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Ajuste a altura conforme necessário */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide-active {
+    opacity: 1;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
