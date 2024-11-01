@@ -209,7 +209,9 @@
   }
   
   .whatsapp-botao:hover {
-    background-color: #1ebe5b; /* Cor mais escura ao passar o mouse */
+    background-color: white;
+    color: black; /* Cor mais escura ao passar o mouse */
+    
   }
   
   .whatsapp-botao img {

@@ -1,22 +1,15 @@
+let currentIndex = 0;
 
-    const carousel = document.querySelector('.carousel');
-    const slides = carousel.querySelectorAll('.slide');
-    const anterior = carousel.querySelector('.anterior');
-    const proximo = carousel.querySelector('.proximo');
-    let currentSlide = 0;
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-images img');
+    currentIndex += direction;
 
-    function showSlide(n) {
-        slides[currentSlide].classList.remove('slide-active');
-        currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].classList.add('slide-active');
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    } else if (currentIndex >= slides.length) {
+        currentIndex = 0;
     }
 
-    proximo.addEventListener('click', () => {
-        showSlide(currentSlide + 1);
-    });
-
-    anterior.addEventListener('click', () => {
-        showSlide(currentSlide - 1);
-    });
-
-    showSlide(0);
+    const offset = -currentIndex * 100; // Mover a imagem com base no índice
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
